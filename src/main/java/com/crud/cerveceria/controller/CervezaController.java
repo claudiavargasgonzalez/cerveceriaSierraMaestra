@@ -60,7 +60,7 @@ public class CervezaController {
 	
 	
 	@GetMapping("/cervezas/eliminar/{id}")
-	public String eliminarEstudiante(@PathVariable Long id) {
+	public String eliminarCerveza(@PathVariable Long id) {
 		service.eliminarCerveza(id);
 		return "redirect:/cervezas";
 	}

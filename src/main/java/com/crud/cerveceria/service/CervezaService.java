@@ -14,4 +14,5 @@ public interface CervezaService {
 	public Cerveza actualizarCerveza(Cerveza cerveza);
 	
 	public void eliminarCerveza(Long id);
+	
 }

@@ -19,6 +19,8 @@ public class Cerveza {
 	private String tipoCerveza;
 	@Column(name="grado alcoholico", nullable=false)
 	private Double gradoAlcoholico;
+	@Column(name="descripcion", nullable=false)
+	private String descripcion;
 	@Column(name="precioLitro", nullable = true)
 	private Double precioPorLitro;
 	
@@ -38,6 +40,17 @@ public class Cerveza {
 		this.nombreCerveza = nombreCerveza;
 		this.tipoCerveza = tipoCerveza;
 		this.gradoAlcoholico = gradoAlcoholico;
+		this.precioPorLitro = precioPorLitro;
+	}
+
+	public Cerveza(Long id, String nombreCerveza, String tipoCerveza, Double gradoAlcoholico, String descripcion,
+			Double precioPorLitro) {
+		super();
+		this.id = id;
+		this.nombreCerveza = nombreCerveza;
+		this.tipoCerveza = tipoCerveza;
+		this.gradoAlcoholico = gradoAlcoholico;
+		this.descripcion = descripcion;
 		this.precioPorLitro = precioPorLitro;
 	}
 
@@ -80,11 +93,20 @@ public class Cerveza {
 	public void setPrecioPorLitro(Double precioPorLitro) {
 		this.precioPorLitro = precioPorLitro;
 	}
+	
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
 	@Override
 	public String toString() {
 		return "Cerveza [id=" + id + ", nombreCerveza=" + nombreCerveza + ", tipoCerveza=" + tipoCerveza
-				+ ", gradoAlcoholico=" + gradoAlcoholico + ", precioPorLitro=" + precioPorLitro + "]";
+				+ ", gradoAlcoholico=" + gradoAlcoholico + ", descripcion=" + descripcion + ", precioPorLitro="
+				+ precioPorLitro + "]";
 	}
 
 	

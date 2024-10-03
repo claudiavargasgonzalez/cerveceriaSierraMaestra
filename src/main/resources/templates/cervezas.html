@@ -51,6 +51,7 @@
 			<th>Nombre</th>
 			<th>Tipo</th>
 			<th>Graduación alcohólica</th>
+			<th>Descripcion</th>
 			<th>Precio por litro</th>
 			<th>Acciones</th>
 			</tr>
@@ -61,9 +62,11 @@
 			<td th:text = "${cerveza.nombreCerveza}">Nombre</td>
 			<td th:text = "${cerveza.tipoCerveza}">Tipo</td>
 			<td th:text = "${cerveza.gradoAlcoholico}">Graduación alcohólica</td>
+			<td th:text = "${cerveza.descripcion}">Descripcion</td>
 			<td th:text = "${cerveza.precioPorLitro}">Precio por litro</td>
 			<td>
 				<a th:href="@{/cervezas/editar/{id}(id=${cerveza.id})}" class="btn btn-info">Editar</a>
+
 				<a th:href="@{/cervezas/eliminar/{id}(id=${cerveza.id})}" class="btn btn-danger">Eliminar</a>
 			</td>
 			</tr>
